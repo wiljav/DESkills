@@ -1,0 +1,70 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install PyYAML jsonschema pytest ruff
+      - name: Validate skills and registry
+        run: python tools/validate_skills.py --catalog catalog.yaml
+      - name: Validate marketplace manifests
+        run: python tools/validate_marketplace.py
+      - name: Check README index is current
+        run: python tools/generate_readme.py --catalog catalog.yaml --check
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install ruff
+      - name: Ruff (tooling)
+        run: ruff check tools
+      - name: Ruff (skill scripts)
+        run: ruff check skills
+      - uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: "**/*.md"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install PyYAML jsonschema pytest
+      - name: Tooling tests
+        run: python -m pytest tools/tests -q
+      - name: Skill script tests
+        run: python tools/run_script_tests.py
+
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check internal links
+        run: python tools/check_links.py
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

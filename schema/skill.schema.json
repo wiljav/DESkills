@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/de-skills/schema/skill.schema.json",
+  "title": "SKILL.md frontmatter",
+  "description": "Validates the YAML frontmatter of every SKILL.md in the repository.",
+  "type": "object",
+  "required": ["name", "metadata", "description"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Kebab-case skill name; must match the containing directory."
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["category"],
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "type": "string",
+          "description": "Taxonomy category; must exist in catalog.yaml."
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "minLength": 40,
+      "description": "Multi-sentence description. Should include 'Use when' and 'Don't use when' guidance for the agent."
+    },
+    "allowed-tools": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9._-]+$"
+      },
+      "uniqueItems": true,
+      "description": "CLI tools / runtimes the skill is allowed to invoke."
+    }
+  }
+}

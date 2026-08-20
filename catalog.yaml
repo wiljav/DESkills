@@ -1,0 +1,317 @@
+categories:
+  - id: DataIngestion
+    title: Data Ingestion
+    description: Batch and streaming ingestion from sources into the lakehouse.
+  - id: StorageAndLakehouse
+    title: Storage & Lakehouse
+    description: Object storage, open table formats, and file formats.
+  - id: Warehousing
+    title: Warehousing
+    description: Cloud data warehouses and workload optimization.
+  - id: DataProcessing
+    title: Data Processing
+    description: Distributed and embedded compute engines (Spark, Flink, DuckDB).
+  - id: DataTransformation
+    title: Data Transformation
+    description: SQL-first transformation frameworks and modeling best practices.
+  - id: Orchestration
+    title: Orchestration
+    description: Pipeline schedulers and DAG authoring.
+  - id: Streaming
+    title: Streaming
+    description: Real-time processing and streaming architecture patterns.
+  - id: DataQuality
+    title: Data Quality
+    description: Testing, expectations, observability, and incident response.
+  - id: DataGovernance
+    title: Data Governance
+    description: Contracts, lineage, catalogs, and PII handling.
+  - id: Databases
+    title: Databases
+    description: Transactional databases commonly used in data platforms.
+  - id: DataInfrastructure
+    title: Data Infrastructure
+    description: IaC, containers, and CI/CD for data platforms.
+  - id: Solutions
+    title: Solutions
+    description: End-to-end reference architectures and migrations.
+  - id: GettingStarted
+    title: Getting Started
+    description: Stack setup, authentication, and tool integrations.
+
+skills:
+  - id: kafka-basics
+    title: Apache Kafka Basics
+    domain: ingestion
+    category: DataIngestion
+    description: Create topics, produce and consume messages, and size clusters for data pipelines.
+  - id: kafka-connect
+    title: Kafka Connect
+    domain: ingestion
+    category: DataIngestion
+    description: Stand up connectors to move data between Kafka and storage/databases.
+  - id: airbyte-basics
+    title: Airbyte
+    domain: ingestion
+    category: DataIngestion
+    description: Build and operate ELT connectors for batch and sync-based ingestion.
+  - id: dlt-python-ingestion
+    title: dlt (Python) Ingestion
+    domain: ingestion
+    category: DataIngestion
+    description: Declarative Python data pipelines that load from any source into warehouses.
+  - id: file-ingestion-gcs-s3
+    title: File Ingestion (GCS/S3)
+    domain: ingestion
+    category: DataIngestion
+    description: Ingest files from object storage into lakehouse tables with schema inference.
+  - id: object-storage-basics
+    title: Object Storage Basics
+    domain: storage
+    category: StorageAndLakehouse
+    description: Design buckets, prefixes, lifecycle, and security for S3 and GCS.
+  - id: iceberg-basics
+    title: Apache Iceberg Basics
+    domain: storage
+    category: StorageAndLakehouse
+    description: Create tables, manage snapshots, and use time travel with Iceberg catalogs.
+  - id: delta-lake-basics
+    title: Delta Lake Basics
+    domain: storage
+    category: StorageAndLakehouse
+    description: Use Delta tables, ACID transactions, and versioning in lakehouse pipelines.
+  - id: hudi-basics
+    title: Apache Hudi Basics
+    domain: storage
+    category: StorageAndLakehouse
+    description: Manage incremental upserts and table services on Hudi tables.
+  - id: parquet-file-formats
+    title: Parquet & File Formats
+    domain: storage
+    category: StorageAndLakehouse
+    description: Choose and optimize Parquet, ORC, Avro, and compression for analytic workloads.
+  - id: bigquery-basics
+    title: BigQuery Basics
+    domain: warehousing
+    category: Warehousing
+    description: Manage datasets, tables, and jobs; query and load data in BigQuery.
+  - id: snowflake-basics
+    title: Snowflake Basics
+    domain: warehousing
+    category: Warehousing
+    description: Configure warehouses, databases, stages, and query patterns in Snowflake.
+  - id: redshift-basics
+    title: Amazon Redshift Basics
+    domain: warehousing
+    category: Warehousing
+    description: Provision clusters, design distribution styles, and run analytics on Redshift.
+  - id: warehouse-optimization
+    title: Warehouse Optimization
+    domain: warehousing
+    category: Warehousing
+    description: Reduce cost and improve query performance with partitioning, clustering, and materialization.
+  - id: spark-basics
+    title: Apache Spark Basics
+    domain: processing
+    category: DataProcessing
+    description: Write, run, and debug PySpark batch jobs against lakehouse tables.
+  - id: spark-optimization
+    title: Spark Optimization
+    domain: processing
+    category: DataProcessing
+    description: Tune partitions, joins, memory, and shuffles for faster Spark jobs.
+  - id: spark-troubleshooting
+    title: Spark Troubleshooting
+    domain: processing
+    category: DataProcessing
+    description: Diagnose OOM, skew, stragglers, and job failures using driver/executor logs.
+  - id: flink-basics
+    title: Apache Flink Basics
+    domain: processing
+    category: DataProcessing
+    description: Build streaming and batch jobs with Flink DataStream and Table APIs.
+  - id: dataflow-basics
+    title: Google Dataflow Basics
+    domain: processing
+    category: DataProcessing
+    description: Build and run Apache Beam pipelines on Dataflow with streaming and batch support.
+  - id: duckdb-basics
+    title: DuckDB Basics
+    domain: processing
+    category: DataProcessing
+    description: Use DuckDB for local analytics, in-process OLAP, and zero-copy queries over Parquet.
+  - id: dbt-core
+    title: dbt Core
+    domain: transformation
+    category: DataTransformation
+    description: Model, test, and document warehouse data with dbt projects.
+  - id: dbt-tests-macros
+    title: dbt Tests & Macros
+    domain: transformation
+    category: DataTransformation
+    description: Write singular/generic tests, macros, and packages for reliable dbt projects.
+  - id: sql-transformation-best-practices
+    title: SQL Transformation Best Practices
+    domain: transformation
+    category: DataTransformation
+    description: Write performant, maintainable, and reviewable transformation SQL.
+  - id: airflow-basics
+    title: Apache Airflow Basics
+    domain: orchestration
+    category: Orchestration
+    description: Install, configure, and operate Airflow as the pipeline orchestrator.
+  - id: airflow-dag-authoring
+    title: Airflow DAG Authoring
+    domain: orchestration
+    category: Orchestration
+    description: Author production DAGs with idempotency, retries, and correct task design.
+  - id: airflow-job-failure-troubleshooting
+    title: Airflow Job Failure Troubleshooting
+    domain: orchestration
+    category: Orchestration
+    description: Diagnose scheduler, task, and infrastructure failures from Airflow logs.
+  - id: dagster-basics
+    title: Dagster Basics
+    domain: orchestration
+    category: Orchestration
+    description: Build typed, testable data pipelines with assets, ops, and jobs in Dagster.
+  - id: prefect-basics
+    title: Prefect Basics
+    domain: orchestration
+    category: Orchestration
+    description: Orchestrate Python data workflows with Prefect flows and deployments.
+  - id: flink-sql
+    title: Flink SQL
+    domain: streaming
+    category: Streaming
+    description: Author streaming pipelines with Flink SQL and change-data-capture sources.
+  - id: kafka-streams
+    title: Kafka Streams
+    domain: streaming
+    category: Streaming
+    description: Build stateful stream processing applications on Kafka Streams.
+  - id: streaming-architecture-patterns
+    title: Streaming Architecture Patterns
+    domain: streaming
+    category: Streaming
+    description: Choose event-driven, CDC, and lambda/kappa patterns for real-time platforms.
+  - id: great-expectations
+    title: Great Expectations
+    domain: quality
+    category: DataQuality
+    description: Define, run, and monitor data expectations against batch data.
+  - id: soda-basics
+    title: Soda
+    domain: quality
+    category: DataQuality
+    description: Write and run data quality checks with Soda Core and Soda Checks Language.
+  - id: dbt-data-quality-tests
+    title: dbt Data Quality Tests
+    domain: quality
+    category: DataQuality
+    description: Enforce uniqueness, not-null, referential, and freshness guarantees in dbt.
+  - id: data-observability
+    title: Data Observability
+    domain: quality
+    category: DataQuality
+    description: Instrument pipelines with metrics, freshness, volume, and anomaly detection.
+  - id: data-quality-incident-runbook
+    title: Data Quality Incident Runbook
+    domain: quality
+    category: DataQuality
+    description: Triage, remediate, and post-mortem data quality incidents end to end.
+  - id: data-contracts
+    title: Data Contracts
+    domain: governance
+    category: DataGovernance
+    description: Design and enforce producer-consumer data contracts across the platform.
+  - id: openlineage-basics
+    title: OpenLineage
+    domain: governance
+    category: DataGovernance
+    description: Emit and query lineage events from orchestrators and compute engines.
+  - id: datahub-catalog
+    title: DataHub Catalog
+    domain: governance
+    category: DataGovernance
+    description: Register, document, and discover data assets in DataHub.
+  - id: metadata-catalog-comparison
+    title: Metadata Catalog Comparison
+    domain: governance
+    category: DataGovernance
+    description: Choose between DataHub, Unity Catalog, Glue, and knowledge-catalog tools.
+  - id: pii-classification-and-masking
+    title: PII Classification & Masking
+    domain: governance
+    category: DataGovernance
+    description: Detect, classify, and mask personally identifiable information in datasets.
+  - id: postgres-basics
+    title: PostgreSQL Basics
+    domain: databases
+    category: Databases
+    description: Configure, tune, and integrate PostgreSQL into data platforms.
+  - id: mysql-basics
+    title: MySQL Basics
+    domain: databases
+    category: Databases
+    description: Configure, tune, and integrate MySQL into data platforms.
+  - id: mongodb-basics
+    title: MongoDB Basics
+    domain: databases
+    category: Databases
+    description: Model, query, and integrate MongoDB document collections into pipelines.
+  - id: terraform-for-data
+    title: Terraform for Data Platforms
+    domain: infrastructure
+    category: DataInfrastructure
+    description: Provision warehouse, storage, and orchestrator infrastructure as code.
+  - id: docker-airflow-dev
+    title: Dockerized Airflow Development
+    domain: infrastructure
+    category: DataInfrastructure
+    description: Stand up a reproducible local Airflow development environment with Docker.
+  - id: ci-cd-for-dbt
+    title: CI/CD for dbt
+    domain: infrastructure
+    category: DataInfrastructure
+    description: Test, lint, and deploy dbt projects through pull-request pipelines.
+  - id: k8s-for-data-jobs
+    title: Kubernetes for Data Jobs
+    domain: infrastructure
+    category: DataInfrastructure
+    description: Run batch and streaming workloads on Kubernetes with best practices.
+  - id: batch-etl-pipeline
+    title: Batch ETL Pipeline
+    domain: solutions
+    category: Solutions
+    description: Build an end-to-end batch ETL pipeline with ingestion, transformation, and quality gates.
+  - id: streaming-analytics-pipeline
+    title: Streaming Analytics Pipeline
+    domain: solutions
+    category: Solutions
+    description: Build an end-to-end streaming pipeline with CDC, processing, and serving.
+  - id: lakehouse-migration
+    title: Lakehouse Migration
+    domain: solutions
+    category: Solutions
+    description: Migrate from data warehouse to open lakehouse with staged cutover.
+  - id: data-platform-architecture
+    title: Data Platform Architecture
+    domain: solutions
+    category: Solutions
+    description: "Design a production data platform: zones, tools, and governance blueprint."
+  - id: de-stack-getting-started
+    title: Data Engineering Stack Setup
+    domain: platform
+    category: GettingStarted
+    description: "Bootstrap the local DE toolchain: Python, Spark, dbt, Airflow, and Docker."
+  - id: data-engineering-auth
+    title: Data Engineering Authentication
+    domain: platform
+    category: GettingStarted
+    description: Configure cloud and toolchain credentials using short-lived, scoped access.
+  - id: mcp-servers-for-data
+    title: MCP Servers for Data
+    domain: platform
+    category: GettingStarted
+    description: Connect agents to data platforms through Model Context Protocol servers.

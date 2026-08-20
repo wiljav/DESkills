@@ -1,0 +1,27 @@
+[project]
+name = "de-skills-tooling"
+version = "0.1.0"
+description = "Validation and generation tooling for the Data Engineering Agent Skills repository"
+requires-python = ">=3.9"
+dependencies = [
+    "PyYAML>=6.0",
+    "jsonschema>=4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4",
+    "markdownlint-cli>=0.40",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+extend-exclude = [".venv", "build", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tools/tests"]

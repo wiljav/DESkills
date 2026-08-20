@@ -1,0 +1,4 @@
+# Git submodules for vendored plugin repositories (MCP servers / harness plugins).
+# Each entry pins an upstream plugin release tag. Upstream repos remain the
+# source of truth. Add new plugins with:
+#   git submodule add -b <tag> <repo-url> plugins/data-eng-kit/<name>

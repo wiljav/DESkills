@@ -1,0 +1,52 @@
+---
+name: {{NAME}}
+metadata:
+  category: {{CATEGORY}}
+description: >-
+  <One or two sentences on what the skill does.>
+  Use when <the exact agent-facing trigger condition>.
+  Don't use when <adjacent-but-out-of-scope condition>.
+allowed-tools: <tools the skill invokes, e.g. "python dbt gcloud">
+---
+
+# <Skill Title>
+
+<2-3 sentence overview of what the skill accomplishes and its output.
+
+## Prerequisites
+
+-   <environment, credentials, versions, or prior skills required>
+
+## Safety & Confirmation Tiers
+
+-   **Tier R (read-only)**: <actions safe to run without confirmation>.
+-   **Tier M (mutation)**: <actions that create/modify resources; require
+    explicit user confirmation before execution>.
+
+## Workflow
+
+### 1. <Phase Name>
+
+<Steps using MUST/SHOULD language. Include concrete commands, expected
+outputs, and failure branches.>
+
+### 2. <Phase Name>
+
+<...>
+
+## Validation
+
+<How the agent verifies the work succeeded. Include pass criteria.>
+
+## Definition of Done
+
+-   <checklist items that must all be true before concluding>
+
+## Reference Directory
+
+-   [Core Concepts](references/core-concepts.md): <one-line summary>.
+-   [Usage](references/usage.md): <one-line summary>.
+
+## Related Skills
+
+-   [<Sibling Skill>](../<sibling>/SKILL.md): <why it is related>.

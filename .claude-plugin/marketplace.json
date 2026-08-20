@@ -1,0 +1,30 @@
+{
+  "name": "de-skills-plugins",
+  "owner": {
+    "name": "Data Engineering Skills"
+  },
+  "metadata": {
+    "version": "0.1.0",
+    "description": "Data engineering agent skills and plugins for multi-cloud and open-source tooling."
+  },
+  "plugins": [
+    {
+      "name": "bigquery-mcp",
+      "source": {
+        "source": "github",
+        "repo": "org/bigquery-mcp",
+        "ref": "main"
+      },
+      "description": "MCP server for querying and managing BigQuery datasets."
+    },
+    {
+      "name": "datahub-mcp",
+      "source": {
+        "source": "github",
+        "repo": "org/datahub-mcp",
+        "ref": "main"
+      },
+      "description": "MCP server for DataHub catalog discovery and lineage."
+    }
+  ]
+}

@@ -19,20 +19,20 @@ Validated against `schema/skill.schema.json`:
 
 Required sections (checked by `make validate`):
 
-1.  **Prerequisites** — environment, versions, credentials, and prior skills
+1. **Prerequisites** — environment, versions, credentials, and prior skills
     the agent must confirm before starting.
-2.  **Safety & Confirmation Tiers** — split actions into:
+2. **Safety & Confirmation Tiers** — split actions into:
     - `Tier R` (read-only): run without confirmation.
     - `Tier M` (mutation): creating resources, running destructive SQL
       (`--full-refresh`, `DROP`, `TRUNCATE`), deploying — requires explicit
       user confirmation, with cost/blast-radius warnings.
-3.  **Workflow** — numbered phases using MUST/SHOULD language, concrete
+3. **Workflow** — numbered phases using MUST/SHOULD language, concrete
     commands, expected outputs, and failure branches.
-4.  **Validation** — how to prove the work succeeded (pass criteria).
-5.  **Definition of Done** — checklist that must all be true before the agent
+4. **Validation** — how to prove the work succeeded (pass criteria).
+5. **Definition of Done** — checklist that must all be true before the agent
     concludes.
-6.  **Reference Directory** — links into `references/`.
-7.  **Related Skills** — cross-links to sibling skills.
+6. **Reference Directory** — links into `references/`.
+7. **Related Skills** — cross-links to sibling skills.
 
 ## Writing conventions
 

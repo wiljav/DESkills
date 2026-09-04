@@ -5,19 +5,19 @@ gates enforced by [CI](.github/workflows/ci.yml). This checklist is the contract
 
 ## Adding or editing a skill
 
-1.  Create the skill under `skills/<domain>/<skill-name>/` using the scaffolder
+1. Create the skill under `skills/<domain>/<skill-name>/` using the scaffolder
     to guarantee a valid skeleton:
 
     ```bash
     make scaffold DOMAIN=orchestration NAME=airflow-dag-authoring
     ```
 
-2.  Author `SKILL.md` following the [skill authoring guide](docs/skill-authoring-guide.md).
+2. Author `SKILL.md` following the [skill authoring guide](docs/skill-authoring-guide.md).
 
-3.  Update the registry (`catalog.yaml`) with the new skill so it appears in the
+3. Update the registry (`catalog.yaml`) with the new skill so it appears in the
     generated README index.
 
-4.  Run the local validation pipeline — **all gates must pass**:
+4. Run the local validation pipeline — **all gates must pass**:
 
     ```bash
     make ci

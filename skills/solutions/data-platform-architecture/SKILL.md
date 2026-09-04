@@ -38,7 +38,7 @@ design.
 
 ### 1. Define Zones
 
-```
+```text
 landing      raw source data, immutable, access-controlled
   -> raw       same data, organized/registered (bronze)
   -> curated   conformed, typed, documented (silver)

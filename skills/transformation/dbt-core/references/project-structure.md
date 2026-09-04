@@ -2,7 +2,7 @@
 
 ## Folder conventions
 
-```
+```text
 dbt_project/
 ├── dbt_project.yml          # project config, model paths, materialization defaults
 ├── profiles.yml             # NOT committed; credentials via env vars

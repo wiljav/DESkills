@@ -2,7 +2,7 @@
 
 ## Volume (z-score)
 
-```
+```text
 z = (current - mean_last_30d) / std_last_30d
 alert if |z| > 3, or if count == 0 when count_expected > 0
 ```
@@ -13,7 +13,7 @@ alert if |z| > 3, or if count == 0 when count_expected > 0
 
 ## Freshness
 
-```
+```text
 age = now - max(loaded_at)
 alert if age > warn_after (per cadence table) or > error_after
 ```

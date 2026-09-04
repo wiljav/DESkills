@@ -2,7 +2,7 @@
 
 ## Module shape
 
-```
+```text
 modules/bucket/
   main.tf        # resource definitions
   variables.tf   # inputs with defaults + validation

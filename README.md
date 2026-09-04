@@ -107,7 +107,7 @@ To use a skill with an agent harness, point the harness at the skill directory
 
 ## Repository layout
 
-```
+```text
 skills/<domain>/<skill-name>/     one directory per skill
   SKILL.md                        entry point: frontmatter + workflow + definition of done
   references/                     per-topic deep-dive docs

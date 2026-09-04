@@ -39,7 +39,7 @@ composes the domain skills.
 
 ### 1. Design the Flow
 
-```
+```text
 source (API/DB/files)
   -> ingestion: dlt / Airbyte / Spark (bronze, raw)
   -> transformation: dbt (silver, cleaned)

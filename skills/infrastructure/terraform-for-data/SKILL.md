@@ -38,7 +38,7 @@ Terraform patterns for data infrastructure.
 
 ### 1. Structure the Codebase
 
-```
+```text
 infra/
   environments/
     dev/        # main.tf, variables.tf, backend.tf

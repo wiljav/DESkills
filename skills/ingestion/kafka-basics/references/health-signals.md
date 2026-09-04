@@ -2,7 +2,7 @@
 
 ## Consumer lag
 
-```
+```text
 LAG = latest offset - committed offset
 ```
 

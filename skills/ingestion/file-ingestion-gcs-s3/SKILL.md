@@ -43,7 +43,7 @@ how tables stay correct.
 
 Layout contract (applies to S3 and GCS):
 
-```
+```text
 gs://{bucket}/inbox/{source}/{date=YYYY-MM-DD}/{filename}.parquet
 ```
 

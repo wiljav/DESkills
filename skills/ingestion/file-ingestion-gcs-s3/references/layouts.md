@@ -2,7 +2,7 @@
 
 ## Naming and prefixes
 
-```
+```text
 inbox/{source}/date={YYYY-MM-DD}/{uuid}.parquet
 archive/{source}/date={YYYY-MM-DD}/{uuid}.parquet
 quarantine/{source}/date={YYYY-MM-DD}/{uuid}.parquet + .reason.json

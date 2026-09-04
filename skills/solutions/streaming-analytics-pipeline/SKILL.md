@@ -37,7 +37,7 @@ Assembly skill composing the streaming domain skills.
 
 ### 1. Design the Topology
 
-```
+```text
 sources (CDC, events, telemetry)
   -> Kafka topics (raw)
   -> stream processing: Flink SQL / Kafka Streams (enrich, window, join)
